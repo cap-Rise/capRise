@@ -1,8 +1,13 @@
 import React from 'react'
+import routes from './routes/route'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 const App = () => {
+  const routings= createBrowserRouter(routes);
   return (
-    <div>App</div>
+    <div>
+      <RouterProvider router={routings}></RouterProvider>
+    </div>
   )
 }
 
