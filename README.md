@@ -1,2 +1,3 @@
 # capRise 
-## Stock Market Learning App
+## Stock Market Learning App!
+
