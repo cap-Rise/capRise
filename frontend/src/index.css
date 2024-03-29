@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.background{
+  background-image: url(./assets/dottedBg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
