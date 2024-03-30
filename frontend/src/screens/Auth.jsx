@@ -19,6 +19,23 @@ const Auth = () => {
         <div>
           <img src={svg} alt="" />
         </div>
+         
+        <div className="flex flex-col gap-3">
+          <Button className=" bg-white shadow-2xl h-[3.8rem] w-full gap-3 ">
+            <div className="google">
+              <img src={gLogo} alt="" />
+
+            </div>
+            <div className='font-medium text-lg'>
+              Continue with Google 
+            </div>
+          </Button>
+          <div className='or font-medium text-2xl'>OR</div>
+          <Button className=" h-[3.8rem] w-full text-white   font-medium text-lg">
+            SignUp with email 
+          </Button>
+
+        </div>
         
         <div className=' font-medium text-lightGrey text-center '>
         By signing up you agree our <span className=' text-darkBlue cursor-pointer'><u>Terms and Conditions</u></span> 
