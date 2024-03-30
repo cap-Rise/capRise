@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PreLoader from '../components/PreLoader';
-import SignUp from './SignUp';
+import Pin from './Pin';
 
 const Landing = () => {
   const [loading, setLoading] = useState(false);
@@ -20,17 +20,7 @@ const Landing = () => {
       {loading ? (
         <PreLoader />
       ) : (
-        <div>
-          {isLoggedIn ? (
-            <div>
-              <p>Login</p>
-            </div>
-          ) : (
-            <div>
-              <SignUp/>
-            </div>
-          )}
-        </div>
+        <Pin/>
       )}
     </div>
   );
