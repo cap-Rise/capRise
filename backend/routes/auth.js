@@ -85,7 +85,7 @@ router.get('/google/callback',
                 token = jwt.sign(data, JWT_token);
                 console.log(token)
                 // res.setHeader({ token })
-                res.redirect(`http://localhost:5000/auth/verifypin/?authToken=${token}&googleToken=${googleToken}`)
+                res.redirect(`http://localhost:3000/callback/?authToken=${token}&googleToken=${googleToken}`)
             }
         } catch (error) {
             console.error(error);
@@ -127,7 +127,7 @@ router.get('/logout', fetchUser, async (req, res) => {
                 }
 
                 // Redirect to the homepage
-                res.redirect('http://localhost:5000/');
+                res.json({redirectTo:'http://localhost:3000/auth'});
             });
         });
     } catch (err) {

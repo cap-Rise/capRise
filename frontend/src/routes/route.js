@@ -2,6 +2,7 @@ import React from "react";
 import Landing from "../screens/Landing";
 import SignUp from "../screens/SignUp";
 import Auth from "../screens/Auth";
+import Callback from "../screens/Callback";
 const routes =[
     {
         path : "/",
@@ -14,6 +15,10 @@ const routes =[
     {
         path : "/signup",
         element: <SignUp/>,
+    },
+    {
+        path : "/callback",
+        element: <Callback/>,
     },
 
 ];

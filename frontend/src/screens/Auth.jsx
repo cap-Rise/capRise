@@ -21,15 +21,17 @@ const Auth = () => {
           </div>
 
           <div className="flex flex-col gap-3">
-            <Button className=" bg-white shadow-2xl h-[3.8rem] w-full gap-3 ">
-              <div className="google">
-                <img src={gLogo} alt="" />
+            <a href='http://localhost:5000/auth/google'>
+              <Button className=" bg-white shadow-2xl h-[3.8rem] w-full gap-3 ">
+                <div className="google">
+                  <img src={gLogo} alt="" />
 
-              </div>
-              <div className='font-medium text-lg'>
-                Continue with Google
-              </div>
-            </Button>
+                </div>
+                <div className='font-medium text-lg'>
+                  Continue with Google
+                </div>
+              </Button>
+            </a>
             <div className='or font-medium text-2xl'>OR</div>
             <Link to="/signup"><Button className=" h-[3.8rem] w-full text-white   font-medium text-lg">
               Sign Up with email
