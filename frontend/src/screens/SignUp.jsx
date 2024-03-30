@@ -53,9 +53,9 @@ const SignUp = () => {
                   className=' w-full h-12  p-3 font-medium  border-[2px] rounded-lg  '
                   type="text"
                   id="username"
-                  
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
+                  required
                 />
               </div>
               <div  className='flex flex-col gap-1 w-full'>
@@ -67,6 +67,8 @@ const SignUp = () => {
                   placeholder='example@example.com'
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  required
+
                 />
               </div>
               <div className='flex flex-col gap-1 w-full'>
@@ -78,6 +80,7 @@ const SignUp = () => {
                   id="pin"
                   value={pin}
                   onChange={(e) => setPin(e.target.value)}
+                  required
                 />
               </div>
               <div className='flex flex-col gap-1 w-full'>
@@ -89,6 +92,7 @@ const SignUp = () => {
                   id="confirmPin"
                   value={confirmPin}
                   onChange={(e) => setConfirmPin(e.target.value)}
+                  required
                 />
               </div>
               {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}

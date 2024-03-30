@@ -13,7 +13,7 @@ const Auth = () => {
           <div className=" pt-12 flex justify-center items-center">
               <img src={logo} className='w-[70%]' alt="" />
           </div>
-          <div className='font-extrabold text-3xl text-darkGrey text-center'>SignUp</div>
+          <div className='font-extrabold text-3xl text-darkGrey text-center'>Sign Up</div>
         </div>
 
         <div>
@@ -32,7 +32,7 @@ const Auth = () => {
           </Button>
           <div className='or font-medium text-2xl'>OR</div>
           <Button className=" h-[3.8rem] w-full text-white   font-medium text-lg">
-            SignUp with email 
+            Sign Up with email 
           </Button>
 
         </div>
