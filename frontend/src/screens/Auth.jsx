@@ -8,10 +8,10 @@ const Auth = () => {
   return (
     <div>
         <div className='background w-[100vw] h-[100vh] flex justify-center'>
-       <div className='flex flex-col gap-7 p-5 '>
+       <div className='flex flex-col gap-8 p-5 '>
         <div className=" title flex flex-col gap-7  ">
           <div className=" pt-12 flex justify-center items-center">
-              <img src={logo} className='w-[80%]' alt="" />
+              <img src={logo} className='w-[70%]' alt="" />
           </div>
           <div className='font-extrabold text-3xl text-darkGrey text-center'>SignUp</div>
         </div>
@@ -37,7 +37,7 @@ const Auth = () => {
 
         </div>
         
-        <div className=' font-medium text-lightGrey text-center '>
+        <div className=' font-medium text-sm text-lightGrey text-center '>
         By signing up you agree our <span className=' text-darkBlue cursor-pointer'><u>Terms and Conditions</u></span> 
         </div>
         
