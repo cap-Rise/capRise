@@ -23,7 +23,8 @@ const Landing = () => {
         <div>
           {isLoggedIn ? (
             <div>
-              <p>Login</p>
+              <p>Login</p> 
+              {/* Only render home page other login signup logic will be there at home page */}
             </div>
           ) : (
             <div>
