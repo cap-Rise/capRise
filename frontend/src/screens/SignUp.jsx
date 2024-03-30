@@ -94,9 +94,10 @@ const SignUp = () => {
                   onChange={(e) => setConfirmPin(e.target.value)}
                   required
                 />
+                 {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
               </div>
-              {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-              <Button type="submit" className="mt-8 h-[3.8rem] w-full text-white   font-medium text-lg">
+             
+              <Button type="submit" className="mt-5 h-[3.8rem] w-full text-white  font-medium text-lg">
                 Sign Up 
               </Button>
         </form>
