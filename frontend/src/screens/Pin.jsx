@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import logo from '../assets/logo_Blue.webp'
 import sample from '../assets/safe.png'
+import authContext from '../context/authContext'
 
 
 const Pin = () => {

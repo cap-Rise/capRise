@@ -1,12 +1,15 @@
 import React from 'react'
 import routes from './routes/route'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import AuthState from './context/AuthState';
 
 const App = () => {
-  const routings= createBrowserRouter(routes);
+  const routings = createBrowserRouter(routes);
   return (
     <div>
-      <RouterProvider router={routings}></RouterProvider>
+      <AuthState>
+        <RouterProvider router={routings}></RouterProvider>
+      </AuthState>
     </div>
   )
 }
