@@ -3,6 +3,7 @@ import Landing from "../screens/Landing";
 import SignUp from "../screens/SignUp";
 import Auth from "../screens/Auth";
 import Callback from "../screens/Callback";
+import Home from "../screens/Home";
 
 const routes =[
     {
@@ -21,6 +22,11 @@ const routes =[
         path : "/callback",
         element: <Callback/>,
     },
+    {
+        path : "/home",
+        element: <Home/>,
+    },
+   
    
 
 ];
