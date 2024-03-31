@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import logo from '../assets/logo_Blue.webp';
 import { Button } from '../components/Button';
+import {useNavigate} from "react-router-dom"
 
 const SignUp = () => {
+
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: '',
     email: '',
     pin: '',
     confirmPin: '',
+    uniqueUserName: '',
   });
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -19,7 +23,7 @@ const SignUp = () => {
     }));
   };
 
-  const handleSignUp = (e) => {
+  const handleSignUp = async (e) => {
     e.preventDefault();
     const { pin, confirmPin } = formData;
     if (pin !== confirmPin) {
@@ -31,16 +35,45 @@ const SignUp = () => {
       return;
     }
 
-    console.log('Form Data:', formData);
-   
+    // const username = generateFromEmail(
+    //   formData.email,
+    //   3
+    // );
+    // console.log(username);
+    // console.log('Form Data:', formData);
 
-    setFormData({
-      username: '',
-      email: '',
-      pin: '',
-      confirmPin: '',
+
+    // setFormData({
+    //   username: '',
+    //   email: '',
+    //   pin: '',
+    //   confirmPin: '',
+    // });
+    // setErrorMessage('');
+    e.preventDefault();
+    const response = await fetch("http://localhost:5000/auth/createUser", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(
+        {
+          name: formData.username,
+          email: formData.email,
+          pin: formData.confirmPin
+        }
+      )
     });
-    setErrorMessage('');
+    const Data = await response.json();
+    console.log(Data)
+    if (Data.success) {
+      localStorage.setItem("auth-token", Data.token)
+      navigate("/")
+
+    } else {
+      alert(Data.Error)
+    }
+
   };
 
   return (
