@@ -6,6 +6,7 @@ const { google } = require('googleapis');
 const fetchUser = require('../middleware/fetchUser');
 const User = require('../models/User')
 require('dotenv').config();
+const { generateFromEmail } = require("unique-username-generator");
 
 const JWT_token = process.env.NODE_JWT_TOKEN;
 
@@ -18,6 +19,10 @@ router.post('/createuser', async (req, res) => {
             return res.status(400).json({ success, Error: 'User with this email already exist' })
         }
         // Creating User
+        const uniqueName = generateFromEmail(
+            req.body.email,
+            3
+          );
         user = await User.create({
             name: req.body.name,
             email: req.body.email,
@@ -27,7 +32,7 @@ router.post('/createuser', async (req, res) => {
             rank: req.body.rank,
             totalStockBought: req.body.totalStockBought,
             totalStockSold: req.body.totalStockSold,
-            userName: req.body.userName,
+            userName: uniqueName,
             portfolioValue: req.body.portfolioValue,
             totalPnl: req.body.totalPnl
         })
