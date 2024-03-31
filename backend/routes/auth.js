@@ -6,7 +6,7 @@ const { google } = require('googleapis');
 const fetchUser = require('../middleware/fetchUser');
 const User = require('../models/User')
 require('dotenv').config();
-const { generateFromEmail } = require("unique-username-generator");
+const uniqueUserNameGenerator = require("unique-username-generator");
 
 const JWT_token = process.env.NODE_JWT_TOKEN;
 
@@ -19,10 +19,10 @@ router.post('/createuser', async (req, res) => {
             return res.status(400).json({ success, Error: 'User with this email already exist' })
         }
         // Creating User
-        const uniqueName = generateFromEmail(
+        const uniqueName = uniqueUserNameGenerator.generateFromEmail(
             req.body.email,
             3
-          );
+        );
         user = await User.create({
             name: req.body.name,
             email: req.body.email,
@@ -72,7 +72,7 @@ router.get('/google/callback',
         // console.log(res.req.user.id_token)
         const data = res.req.user;
         console.log(data)
-        const googleToken=data.access_token
+        const googleToken = data.access_token
         const decoded = jwt.decode(data.id_token)
         console.log(decoded)
         // res.redirect("http://localhost:5000/auth/createuser")
@@ -132,7 +132,7 @@ router.get('/logout', fetchUser, async (req, res) => {
                 }
 
                 // Redirect to the homepage
-                res.json({redirectTo:'http://localhost:3000/auth'});
+                res.json({ redirectTo: 'http://localhost:3000/auth' });
             });
         });
     } catch (err) {
@@ -144,8 +144,24 @@ router.get('/logout', fetchUser, async (req, res) => {
 
 
 
-router.get('/verifypin', (req, res) => {
-    res.send("Hello verify pin")
+router.post('/verifypin', fetchUser,async (req, res) => {
+    try {
+        let success = false;
+        const userId = req.user.id;
+        const checkPin = req.body.pin;
+        const user = await User.findById(userId);
+        if(checkPin == user.pin){
+            const data = {
+                id: user.id
+            }
+            token = jwt.sign(data, JWT_token);
+            res.status(200).json({success:true,token})
+        }else{
+            res.json({success,Error:"Please Enter a Valid Pin"})
+        }
+    } catch (error) {
+        console.error(error);
+    }
 })
 
 
