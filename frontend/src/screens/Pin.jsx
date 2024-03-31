@@ -33,13 +33,7 @@ const Pin = () => {
         <div className="avtaar flex justify-center items-center">
           <img src={sample} alt="" />
         </div>
-        {/* div below is just for testing pusrpose remove it after testing logout */}
-        <div>
-          <button onClick={handleLogout} className='cursor-pointer  '>
-            <h1>LOGOUT</h1>
-          </button>
-        </div>
-        {/* remove this one div above between this two comments along with the comment */}
+        
         </div>
         </div>
         
