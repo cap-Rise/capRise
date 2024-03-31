@@ -54,7 +54,7 @@ const SignUp = () => {
         </div>
 
         <div className='form  '>
-          <form className='flex flex-col gap-4'>
+          <div className='flex flex-col gap-4'>
             <div className='flex flex-col gap-1 w-full'>
               <label className=' text-darkBlue font-semibold text-base' htmlFor="username">Username:</label>
               <input
@@ -111,7 +111,7 @@ const SignUp = () => {
             <Button onClick={handleSignUp} className="mt-5 h-[3.8rem] w-full text-white  font-medium text-lg">
               Sign Up
             </Button>
-          </form>
+          </div>
         </div>
 
         <div className=' font-medium text-sm text-lightGrey text-center '>
