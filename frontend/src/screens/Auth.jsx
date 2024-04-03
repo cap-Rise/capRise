@@ -28,7 +28,7 @@ const Auth = () => {
 
                 </div>
                 <div className='font-medium text-lg'>
-                  Continue with Google
+                  <h1 className='text-black'>Continue with Google</h1>
                 </div>
               </Button>
             </a>
