@@ -6,6 +6,7 @@
 
 
 
+
 .background{
   background-image: url(./assets/dottedBg.png);
   background-repeat: no-repeat;
@@ -35,6 +36,7 @@
 .or:after {
   margin-left: 10px
 }
+
 
 
 button{
