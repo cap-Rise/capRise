@@ -27,13 +27,13 @@ const Auth = () => {
                   <img src={gLogo} alt="" />
 
                 </div>
-                <div className='font-medium text-lg'>
+                <div className='font-medium text-black text-lg'>
                   Continue with Google
                 </div>
               </Button>
             </a>
             <div className='or font-medium text-2xl'>OR</div>
-            <Link to="/signup"><Button className=" h-[3.8rem] w-full text-white   font-medium text-lg">
+            <Link to="/signup"><Button className=" h-[3.8rem] w-full    font-medium text-lg">
               Sign Up with email
             </Button></Link>
 
