@@ -4,7 +4,8 @@ import authContext from './authContext'
 const AuthState = (props) => {
 
   const [userData, setUserData] = useState({})
-  
+  const [loaderSession, setLoaderSession] = useState(true)
+  const [Name, setName] = useState("Toyash")
   const getUser = async () => {
     const host = "http://localhost:5000"
     const response = await fetch(`${host}/auth/getuser`, {
@@ -41,7 +42,7 @@ const AuthState = (props) => {
   }
   return (
 
-    <authContext.Provider value={{ getUser, logout,userData }}>
+    <authContext.Provider value={{ getUser, logout,userData,loaderSession,setLoaderSession,Name,setName }}>
       {props.children}
     </authContext.Provider>
   )

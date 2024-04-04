@@ -1,38 +1,76 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&family=Roboto&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
+* {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300px;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+@keyframes shake {
+  0% {
+    margin-left: 0rem;
+  }
+
+  25% {
+    margin-left: 0.5rem;
+  }
+
+  75% {
+    margin-left: -0.5rem;
+  }
+
+  100% {
+    margin-left: 0rem;
+  }
+}
+
+.notValid {
+  animation: shake 0.2s ease-in-out 0s 2;
+  box-shadow: 0 0 0.6rem #ff0000;
+}
 
 
 
-.background{
+.background {
   background-image: url(./assets/dottedBg.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
-.other{
+
+.other {
   animation: fadeIn 3s;
 
 }
-.logo{
+
+.logo {
   animation: fadeIn 3s;
 
 }
-.or{
+
+.or {
   display: flex;
   flex-direction: row;
 }
-.or:before, .or:after{
+
+.or:before,
+.or:after {
   content: "";
   flex: 1 1;
   border-bottom: 1px solid #000000;
   margin: auto;
 }
+
 .or:before {
   margin-right: 10px
 }
+
 .or:after {
   margin-left: 10px
 }
@@ -45,6 +83,11 @@
 /* --------Animations------- */
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
