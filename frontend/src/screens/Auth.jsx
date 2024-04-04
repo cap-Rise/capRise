@@ -1,10 +1,27 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from "react-router-dom"
 import svg from '../assets/signupSvg.svg'
 import logo from '../assets/logo_Blue.webp'
 import { Button } from '../components/Button'
 import gLogo from '../assets/googleLogo.png'
+import PreLoader from '../components/PreLoader'
+import authContext from '../context/authContext'
 const Auth = () => {
+  const [loading, setLoading] = useState(true);
+  const { loaderSession, setLoaderSession } = useContext(authContext)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+  }, [])
+
+
+  if (loading) {
+    return (<PreLoader />)
+  }
+
   return (
     <div>
       <div className='background w-[100vw] h-[100vh] flex justify-center'>

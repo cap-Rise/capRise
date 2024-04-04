@@ -4,11 +4,12 @@ import SignUp from "../screens/SignUp";
 import Auth from "../screens/Auth";
 import Callback from "../screens/Callback";
 import Home from "../screens/Home";
+import Pin from "../screens/Pin";
 
 const routes =[
     {
         path : "/",
-        element: <Landing/>,
+        element: <Pin/>,
     },
     {
         path : "/auth",
