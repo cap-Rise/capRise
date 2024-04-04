@@ -110,6 +110,7 @@ const Pin = () => {
             <div className="flex text-xl font-bold text-black justify-center items-center">Enter you Pin</div>
             <div className="flex flex-col justify-center items-center gap-[5rem] w-full">
               <PinInput
+                
                 inputStyle={
                   {
                     border: "0.1px", borderRadius: "12px", boxShadow: " 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)", margin: "5px",
@@ -124,6 +125,7 @@ const Pin = () => {
                 secret
                 type="text"
                 inputMode="text"
+                value={pin}
                 onChange={handlePinChange}
                 style={
                   isValid // Check if pin is valid
