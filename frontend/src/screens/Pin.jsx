@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext, useEffect,useRef } from 'react'
 
 import logo from '../assets/logo_Blue.webp'
 import jiya from '../assets/jiya.png'
@@ -41,6 +41,7 @@ const Pin = () => {
 
   const [pin, setPin] = useState('');
   const [isValid, setIsValid] = useState(true)
+  const pinInputRef = useRef(null);
 
   const handlePinSubmit = async () => {
     const pinObj = { pin };
@@ -59,9 +60,12 @@ const Pin = () => {
 
     } else {
       setIsValid(false)
+      pinInputRef.current.clear();
+      
       setTimeout(() => {
         setIsValid(true)
       }, 1000);
+      
     }
   };
   const handlePinChange = (value) => {
@@ -110,6 +114,7 @@ const Pin = () => {
             <div className="flex text-xl font-bold text-black justify-center items-center">Enter you Pin</div>
             <div className="flex flex-col justify-center items-center gap-[5rem] w-full">
               <PinInput
+               ref={pinInputRef}
                 
                 inputStyle={
                   {
