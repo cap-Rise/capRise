@@ -15,7 +15,7 @@ import PreLoader from '../components/PreLoader'
 const Pin = () => {
   const navigate = useNavigate();
   const navigation = useNavigation();
-  const { getUser, logout, userData, loaderSession, setLoaderSession,Name,setName } = useContext(authContext);
+  const { getUser, logout, userData, loaderSession, setLoaderSession, Name, setName } = useContext(authContext);
 
   const [loading, setLoading] = useState(true);
 
@@ -40,6 +40,7 @@ const Pin = () => {
   }
 
   const [pin, setPin] = useState('');
+  const [isValid, setIsValid] = useState(true)
 
   const handlePinSubmit = async () => {
     const pinObj = { pin };
@@ -57,7 +58,10 @@ const Pin = () => {
       navigate("/home", { replace: true })
 
     } else {
-      alert(Data.Error)
+      setIsValid(false)
+      setTimeout(() => {
+        setIsValid(true)
+      }, 1000);
     }
   };
   const handlePinChange = (value) => {
@@ -70,6 +74,24 @@ const Pin = () => {
 
   return (
     <div>
+      <style>
+        {`
+          @keyframes shake {
+            0% {
+              margin-left: 0rem;
+            }
+            25% {
+              margin-left: 0.5rem;
+            }
+            75% {
+              margin-left: -0.5rem;
+            }
+            100% {
+              margin-left: 0rem;
+            }
+          }
+        `}
+      </style>
       <div className='background w-[100vw] h-[100vh] flex justify-center'>
         <div className='flex flex-col gap-9 w-[90%]'>
           <div className=" title flex flex-col gap-7  ">
@@ -89,7 +111,10 @@ const Pin = () => {
             <div className="flex flex-col justify-center items-center gap-[5rem] w-full">
               <PinInput
                 inputStyle={
-                  { border: "0.1px", borderRadius: "12px", boxShadow: " 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)", margin: "5px" }
+                  {
+                    border: "0.1px", borderRadius: "12px", boxShadow: " 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)", margin: "5px",
+                    
+                  }
                 }
                 inputFocusStyle={
                   { borderRadius: "12px", boxShadow: " 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)", margin: "5px" }
@@ -100,6 +125,12 @@ const Pin = () => {
                 type="text"
                 inputMode="text"
                 onChange={handlePinChange}
+                style={
+                  isValid // Check if pin is valid
+                    ? null // Apply default style if valid
+                    : { animation: 'shake 0.2s ease-in-out 0s 2' } // Apply invalid style if not valid
+                }
+
               />
 
               <Button onClick={handlePinSubmit} className="w-full h-[3.8rem]  text-white  font-medium text-lg" >Confirm Pin</Button>
