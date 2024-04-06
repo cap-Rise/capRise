@@ -14,7 +14,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='h-[100vh] w-[100vw] mb-[500px]'>
+    <div className='h-fit w-[100vw] '>
       {/* NAVBAR */}
       <div className='  bottom-0 w-full fixed'><Navbar /></div>
 
