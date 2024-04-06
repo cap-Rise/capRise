@@ -88,7 +88,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="relative w-full h-20 grid grid-cols-2 gap-[5.5rem] bg-white shadow-[0_0_10px_0_#d3d3d3]">
+      <div className=" fixed  bottom-0 w-full h-20 grid grid-cols-2 gap-[5.5rem] bg-white shadow-[0_0_10px_0_#d3d3d3]">
         <div className="relative z-10 bg-white grid grid-cols-2 place-items-center  ">
           {menuItems.map((menuItem, index) => (
             <button className="w-fit h-full" key={index} onClick={() => handleClick(index)}>
