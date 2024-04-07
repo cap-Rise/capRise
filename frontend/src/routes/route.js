@@ -6,6 +6,10 @@ import Callback from "../screens/Callback";
 import Home from "../screens/Home";
 import Pin from "../screens/Pin";
 import Test from "../screens/Test";
+import Portfolio from '../screens/Portfolio'
+import Social from "../screens/Social"
+import Trading from '../screens/Trading'
+import Rewards from '../screens/Rewards'
 
 const routes =[
     {
@@ -27,6 +31,22 @@ const routes =[
     {
         path : "/home",
         element: <Home/>,
+    },
+    {
+        path : "/portfolio",
+        element: <Portfolio/>,
+    },
+    {
+        path : "/social",
+        element: <Social/>,
+    },
+    {
+        path : "/trading",
+        element: <Trading/>,
+    },
+    {
+        path:"/rewards",
+        element: <Rewards/>
     },
     {
         path : "/test",

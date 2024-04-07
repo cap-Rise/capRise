@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div className='h-fit w-[100vw]'>
       {/* NAVBAR */}
-      <div className='bottom-0 w-full fixed'><Navbar /></div>
+      <div ><Navbar /></div>
 
       {/* HOME */}
       <div className='flex flex-col gap-8'>

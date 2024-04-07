@@ -1,8 +1,11 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
 
 const Rewards = () => {
   return (
-    <div>Rewards</div>
+    <div className='h-[100vh] w-[100vw]'>
+      <Navbar/>
+    </div>
   )
 }
 

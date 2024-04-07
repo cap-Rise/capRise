@@ -1,8 +1,11 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
 
 const Social = () => {
   return (
-    <div>Social</div>
+    <div className='h-[100vh] w-[100vw]'>
+      <Navbar/>
+    </div>
   )
 }
 

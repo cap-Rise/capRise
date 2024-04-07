@@ -133,9 +133,9 @@ const Pin = () => {
                 value={pin}
                 onChange={handlePinChange}
                 style={
-                  isValid // Check if pin is valid
-                    ? null // Apply default style if valid
-                    : { animation: 'shake 0.2s ease-in-out 0s 2' } // Apply invalid style if not valid
+                  isValid 
+                    ? null 
+                    : { animation: 'shake 0.2s ease-in-out 0s 2' } 
                 }
 
               />
