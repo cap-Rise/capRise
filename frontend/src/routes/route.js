@@ -5,6 +5,7 @@ import Auth from "../screens/Auth";
 import Callback from "../screens/Callback";
 import Home from "../screens/Home";
 import Pin from "../screens/Pin";
+import Test from "../screens/Test";
 
 const routes =[
     {
@@ -26,6 +27,10 @@ const routes =[
     {
         path : "/home",
         element: <Home/>,
+    },
+    {
+        path : "/test",
+        element: <Test/> ,
     },
    
    
