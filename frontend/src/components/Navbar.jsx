@@ -79,7 +79,7 @@ const Navbar = () => {
 
   const menuItems = [
     { name: 'Home', component: Home },
-    { name: 'Bag', component: Bag }
+    { name: 'Portfolio', component: Bag }
   ];
   const menuItems2 = [
     { name: 'Redeem', component: Redeem },
@@ -125,4 +125,4 @@ const Navbar = () => {
   );
 }
 
-export default Navbar;
+export default Navbar
