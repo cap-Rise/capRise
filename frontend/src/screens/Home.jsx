@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import authContext from '../context/authContext';
 import Navbar from '../components/Navbar';
@@ -12,6 +12,16 @@ import TopGnL from '../components/TopGnL';
 
 const Home = () => {
   const navigate = useNavigate();
+  const {getAllUser,leaderBoardData}=useContext(authContext)
+
+  useEffect(() => {
+    
+    getAllUser()
+    
+  }, [])
+
+  console.log(leaderBoardData)
+  
 
   return (
     <div className='h-fit w-[100vw]'>
@@ -57,8 +67,8 @@ const Home = () => {
             <div className="text-sm font-semibold text-center text-lightBlue flex justify-center items-center"><u>View All </u> &#62; </div>
           </div>
           <div className="flex gap-4 overflow-x-auto">
-            {[0, 1, 2, 3].map((index) => (
-              <TopPortfolioCard key={index} bgColor={index % 2 === 0 ? 'white' : 'lightGray'} />
+            {leaderBoardData.map((user,index) => (
+              <TopPortfolioCard disName={user.name} portfolioValue={user.portfolioValue} key={index} bgColor={index % 2 === 0 ? 'white' : 'lightGray'} />
             ))}
           </div>
         </div>

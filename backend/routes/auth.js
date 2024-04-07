@@ -59,6 +59,18 @@ router.post('/getuser', fetchUser, async (req, res) => {
     }
 })
 
+router.post('/getalluser', async (req, res) => {
+
+    try {
+        const users = await User.find().select('name portfolioValue totalPnl');
+        res.json(users)
+    } catch (error) {
+        console.error(error);
+    }
+})
+
+
+
 
 router.get('/google',
     passport.authenticate('google', { scope: ['email', 'profile'] }));
@@ -144,20 +156,20 @@ router.get('/logout', fetchUser, async (req, res) => {
 
 
 
-router.post('/verifypin', fetchUser,async (req, res) => {
+router.post('/verifypin', fetchUser, async (req, res) => {
     try {
         let success = false;
         const userId = req.user.id;
         const checkPin = req.body.pin;
         const user = await User.findById(userId);
-        if(checkPin == user.pin){
+        if (checkPin == user.pin) {
             const data = {
                 id: user.id
             }
             token = jwt.sign(data, JWT_token);
-            res.status(200).json({success:true,token})
-        }else{
-            res.json({success,Error:"Please Enter a Valid Pin"})
+            res.status(200).json({ success: true, token })
+        } else {
+            res.json({ success, Error: "Please Enter a Valid Pin" })
         }
     } catch (error) {
         console.error(error);

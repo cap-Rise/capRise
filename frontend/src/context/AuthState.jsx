@@ -4,6 +4,7 @@ import authContext from './authContext'
 const AuthState = (props) => {
 
   const [userData, setUserData] = useState({})
+  const [leaderBoardData, setLeaderBoardData] = useState([])
   const [loaderSession, setLoaderSession] = useState(true)
   const [Name, setName] = useState("Toyash")
   const getUser = async () => {
@@ -17,6 +18,17 @@ const AuthState = (props) => {
     });
     const Data = await response.json();
     setUserData(Data);
+  }
+  const getAllUser = async () => {
+    const host = "http://localhost:5000"
+    const response = await fetch(`${host}/auth/getalluser`, {
+      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const Data = await response.json();
+    setLeaderBoardData(Data);
   }
   const logout = async () => {
     if (localStorage.getItem('google-token')) {
@@ -42,7 +54,7 @@ const AuthState = (props) => {
   }
   return (
 
-    <authContext.Provider value={{ getUser, logout,userData,loaderSession,setLoaderSession,Name,setName }}>
+    <authContext.Provider value={{ getUser, logout,getAllUser,leaderBoardData, userData, loaderSession, setLoaderSession, Name, setName }}>
       {props.children}
     </authContext.Provider>
   )
