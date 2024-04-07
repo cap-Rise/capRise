@@ -91,12 +91,13 @@ const Navbar = () => {
           </Link>
           <Link to="/trading">
             <button className='w-fit h-full '>
-              <div className="flex justify-center items-center p-1 absolute -top-10 left-1/2
+              <div className="border-[5px] border-solid border-[#d3d3d3] flex justify-center items-center p-1 absolute -top-10 left-1/2
             -translate-x-1/2
             h-[5rem] w-[5rem]
             bg-darkBlue rounded-full">
                 <Trade/> 
               </div>
+              
             </button>
           </Link>
           
