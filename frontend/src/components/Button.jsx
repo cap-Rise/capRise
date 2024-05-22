@@ -5,11 +5,12 @@ export const Button = ({ className, onClick, children }) => {
     <>
       <button
         onClick={onClick}
-        className={` color-black flex justify-center items-center text-white  bg-darkBlue
+        className={` color-black flex justify-center items-center   bg-darkBlue
          rounded-[0.7rem] duration-500 font-semibold hover:shadow-lg ${className}  `}
       >
         {children}
       </button>
     </>
+    
   );
 };

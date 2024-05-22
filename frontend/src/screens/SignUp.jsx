@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../assets/logo_Blue.webp';
+import logo from '../assets/logoBlue.png';
 import { Button } from '../components/Button';
 import {useNavigate} from "react-router-dom"
 

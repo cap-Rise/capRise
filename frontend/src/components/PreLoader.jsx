@@ -1,6 +1,6 @@
 import React from 'react'
 
-import logoBlue from "../assets/logo_Blue.webp"
+import logoBlue from "../assets/logoBlue.png"
 import safe from '../assets/safe.png'
 import makeInIndia from '../assets/makeInIndia.png'
 import ssl from '../assets/ssl.png'

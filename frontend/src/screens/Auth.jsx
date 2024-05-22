@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from "react-router-dom"
 import svg from '../assets/signupSvg.svg'
-import logo from '../assets/logo_Blue.webp'
+import logo from '../assets/logoBlue.png'
 import { Button } from '../components/Button'
 import gLogo from '../assets/googleLogo.png'
 import PreLoader from '../components/PreLoader'

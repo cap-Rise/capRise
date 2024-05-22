@@ -1,6 +1,6 @@
 import React from 'react'
 import mastercard from "../assets/mastercard.svg"
-import logoCredit from "../assets/logoCredit.svg"
+
 import CreditCard from '../components/CreditCard'
 import BuySellTag from '../components/BuySellTag'
 const Test = () => {

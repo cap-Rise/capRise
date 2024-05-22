@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect,useRef } from 'react'
 
-import logo from '../assets/logo_Blue.webp'
+import logo from '../assets/logoBlue.png'
 import jiya from '../assets/jiya.png'
 import authContext from '../context/authContext'
 import avtaar from '../assets/avtaar.svg'
@@ -107,7 +107,7 @@ const Pin = () => {
           <div className='flex flex-col items-center gap-4 '>
             <div className="avtaar flex flex-col  w-  items-center  ">
               <img className='rounded-full w-[50%] border border-black' src={jiya} alt="" />
-            </div>
+            </div><Button></Button>
             <div className='font-bold text-2xl text-darkGrey text-center uppercase'>{userData.name}</div>
           </div>
           <div className='flex flex-col justify-center items-center gap-4'>

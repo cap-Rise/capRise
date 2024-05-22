@@ -118,6 +118,7 @@ const Navbar = () => {
               <p className='text-base font-semibold'>Social</p>
             </div>
           </button>
+          
          </Link>
 
 
