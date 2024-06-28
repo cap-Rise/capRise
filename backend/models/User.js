@@ -20,6 +20,10 @@ const userSchema = new Schema({
         require:true,
         default:0,
     },
+    caprisePoints:{
+        type:Number,
+        default:0
+    },
     totalMoneyReceived:{
         type:Number,
         require:true,

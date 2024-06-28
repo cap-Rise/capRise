@@ -20,10 +20,19 @@ const PORT = process.env.NODE_SERVER_PORT;
 connectTOMongo();
 
 app.use('/auth',require('./routes/auth'));
+app.use('/stock',require('./routes/stock'));
 
 app.get('/', (req, res) => {
     res.send('<a href="auth/google" >Authenticate with Google</a>')
 })
+// app.get('/getIp',(req,res)=>{
+//     const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+
+//     console.log(ip);
+//     res.json({
+//         ip:ip
+//     })
+// })
 
 app.listen(PORT,()=>{
     console.log("Server started PORT : " + PORT);
