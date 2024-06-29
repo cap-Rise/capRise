@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect,useRef } from 'react'
+import React, { useState, useContext, useEffect, useRef } from 'react'
 
 import logo from '../assets/logoBlue.png'
 import jiya from '../assets/jiya.png'
@@ -56,16 +56,20 @@ const Pin = () => {
     const Data = await response.json();
     console.log(Data)
     if (Data.success) {
-      navigate("/home", { replace: true })
+      if (userData.email === process.env.REACT_APP_ADMIN_EMAIL) {
+        navigate("/admin")
+      }else{
+        navigate("/home", { replace: true })
+      }
 
     } else {
       setIsValid(false)
       pinInputRef.current.clear();
-      
+
       setTimeout(() => {
         setIsValid(true)
       }, 1000);
-      
+
     }
   };
   const handlePinChange = (value) => {
@@ -113,34 +117,34 @@ const Pin = () => {
           <div className='flex flex-col justify-center items-center gap-4'>
             <div className="flex text-xl font-bold text-black justify-center items-center">Enter you Pin</div>
             <div className="flex flex-col justify-center items-center gap-[5rem] w-full">
-            <PinInput
-  ref={pinInputRef}
-  inputStyle={{
-    border:  "0.1px " ,
-    borderRadius: "12px",
-    boxShadow: isValid
-      ? "0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)"
-      : "0 8px 16px 0 rgba(255,0,0,0.2), 0 6px 20px 0 rgba(255,0,0,0.19)",
-    margin: "5px",
-    margin: "5px"
-  }}
-  inputFocusStyle={{
-    borderRadius: "12px",
-    boxShadow: isValid
-      ? "0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)"
-      : "0 8px 16px 0 rgba(255,0,0,0.2), 0 6px 20px 0 rgba(255,0,0,0.19)",
-    margin: "5px"
-    
-  }}
-  length={4}
-  focus
-  secret
-  type="text"
-  inputMode="text"
-  value={pin}
-  onChange={handlePinChange}
-  style={isValid ? null : { animation: 'shake 0.2s ease-in-out 0s 2', borderColor: "red" }}
-/>
+              <PinInput
+                ref={pinInputRef}
+                inputStyle={{
+                  border: "0.1px ",
+                  borderRadius: "12px",
+                  boxShadow: isValid
+                    ? "0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)"
+                    : "0 8px 16px 0 rgba(255,0,0,0.2), 0 6px 20px 0 rgba(255,0,0,0.19)",
+                  margin: "5px",
+                  margin: "5px"
+                }}
+                inputFocusStyle={{
+                  borderRadius: "12px",
+                  boxShadow: isValid
+                    ? "0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)"
+                    : "0 8px 16px 0 rgba(255,0,0,0.2), 0 6px 20px 0 rgba(255,0,0,0.19)",
+                  margin: "5px"
+
+                }}
+                length={4}
+                focus
+                secret
+                type="text"
+                inputMode="text"
+                value={pin}
+                onChange={handlePinChange}
+                style={isValid ? null : { animation: 'shake 0.2s ease-in-out 0s 2', borderColor: "red" }}
+              />
 
               <Button onClick={handlePinSubmit} className="w-full h-[3.8rem]  text-white  font-medium text-lg" >Confirm Pin</Button>
 
