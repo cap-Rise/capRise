@@ -34,7 +34,7 @@ const Modal = ({ isOpen, closeModal }) => {
 
           </div>
           <div className='flex justify-center gap-4 items-center  w-full'>
-            <Button onClick={closeModal} className='bg-white w-full p-1 border-[3px] border-solid text-darkBlue border-darkBlue'>Back</Button>
+            <Button onClick={closeModal} className='bg-white text-darkBlue  w-full p-1 border-[3px] border-solid border-darkBlue'>Back</Button>
             <Button className='w-full text-white p-1 border-[3px] border-solid  border-darkBlue'>Reedem</Button>
           </div>
           

@@ -2,8 +2,8 @@ import React from 'react'
 
 import logoBlue from "../assets/logoBlue.png"
 import safe from '../assets/safe.png'
-import makeInIndia from '../assets/makeInIndia.png'
-import ssl from '../assets/ssl.png'
+import makeInIndia from '../assets/lionIndia.png'
+import ssl from '../assets/ssLSec.png'
 
 
 
@@ -21,10 +21,10 @@ const PreLoader = () => {
                 <img src={safe} alt="" />
               </div>
               <div>
-                <img src={makeInIndia} alt="" />
+                <img src={makeInIndia} className='w-[5rem]' alt="" />
               </div>
               <div>
-                <img src={ssl} alt="" />
+                <img src={ssl} className='w-[5rem]' alt="" />
               </div>
 
             </div>
