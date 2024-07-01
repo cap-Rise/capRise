@@ -50,7 +50,7 @@ const Bag = ({ active, fillColor }) => {
 }
 const Trade=()=>{
   return(
-    <svg width="40" height="35" viewBox="0 0 40 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="35" height="30" viewBox="0 0 40 35" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 30C2.47959 24.7619 2.92386 22.8683 4.0099 22.623C5.89109 23.4426 8.75233 28.1266 11.5347 23.4426L18.0414 21.3934L20.1881 16.4754L32.9802 18.5246L39 5" stroke="#F5E12A"/>
         <path d="M29.3001 7.31427H23.7001V24.6857H29.3001V7.31427Z" fill="#83F19B"/>
         <path d="M30 25.6H23V6.39996H30V25.6ZM24.6963 23.859H28.3037V8.14093H24.6963V23.859Z" fill="#83F19B"/>
@@ -69,31 +69,31 @@ const Navbar = () => {
   const location = useLocation();
   return (
     <div>
-      <div className=" fixed z-10 pl-5 pr-5 grid grid-cols-5 place-items-center gap-3  bottom-0 w-full h-20  bg-white shadow-[0_0_10px_0_#d3d3d3]">
+      <div className=" fixed z-10 pl-5 pr-5 grid grid-cols-5 place-items-center gap-3  bottom-0 w-full h-16  bg-white shadow-[0_0_15px_4px_#d3d3d3]">
         
       <Link to="/home">
           <button className='w-fit h-full'>
-            <div className={`flex flex-col gap-2 justify-center items-center p-1 ${location.pathname === '/home' ? 'text-[#060F66]' : 'text-[#747474]'}`}>
+            <div className={`flex flex-col gap-1 justify-center items-center p-1 ${location.pathname === '/home' ? 'text-[#060F66]' : 'text-[#747474]'}`}>
               <Home active={location.pathname === '/home'} />
-              <p className='text-base font-semibold'>Home</p>
+              <p className='text-sm font-semibold'>Home</p>
             </div>
           </button>
         </Link>
 
           <Link to="/portfolio">
             <button className='w-fit h-full '>
-            <div className={`flex flex-col gap-2 justify-center items-center p-1 ${location.pathname === '/portfolio' ? 'text-[#060F66]' : 'text-[#747474]'}`}>
+            <div className={`flex flex-col gap-1 justify-center items-center p-1 ${location.pathname === '/portfolio' ? 'text-[#060F66]' : 'text-[#747474]'}`}>
                 <Bag active={location.pathname === '/portfolio'}/>
-                <p className='text-base font-semibold'>Portfolio</p>
+                <p className='text-sm font-semibold'>Portfolio</p>
               </div>
             </button>
 
           </Link>
           <Link to="/trading">
             <button className='w-fit h-full '>
-              <div className="border-[5px] border-solid border-[#d3d3d3] flex justify-center items-center p-1 absolute -top-10 left-1/2
+              <div className="border-[4px] border-solid border-[#d3d3d3] flex justify-center items-center p-1 absolute -top-9 left-1/2
             -translate-x-1/2
-            h-[5rem] w-[5rem]
+            h-[4rem] w-[4rem]
             bg-darkBlue rounded-full">
                 <Trade/> 
               </div>
@@ -104,18 +104,18 @@ const Navbar = () => {
 
           <Link to="/rewards">
             <button className='w-fit h-full '>
-            <div className={`flex flex-col gap-2 justify-center items-center p-1 ${location.pathname === '/rewards' ? 'text-[#060F66]' : 'text-[#747474]'}`}>
+            <div className={`flex flex-col gap-1 justify-center items-center p-1 ${location.pathname === '/rewards' ? 'text-[#060F66]' : 'text-[#747474]'}`}>
                 <Reward active={location.pathname === '/rewards'}/>
-                <p className='text-base font-semibold'>Rewards</p>
+                <p className='text-sm font-semibold'>Rewards</p>
               </div>
             </button>
           </Link>
 
          <Link to="/social">
          <button className='w-fit h-full '>
-         <div className={`flex flex-col gap-2 justify-center items-center p-1 ${location.pathname === '/social' ? 'text-[#060F66]' : 'text-[#747474]'}`}>
+         <div className={`flex flex-col gap-1 justify-center items-center p-1 ${location.pathname === '/social' ? 'text-[#060F66]' : 'text-[#747474]'}`}>
               <Social active={location.pathname === '/social'}/>
-              <p className='text-base font-semibold'>Social</p>
+              <p className='text-sm font-semibold'>Social</p>
             </div>
           </button>
           

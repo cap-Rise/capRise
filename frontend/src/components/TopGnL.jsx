@@ -15,28 +15,28 @@ const TopGainers = () => {
         <div>
             <div className="item flex justify-between items-center pb-2 border-b border-solid border-lightGrey ">
                 <div className='flex justify-center items-center gap-2'>
-                <div className="logo h-[48px] w-[48px] rounded-full  border-solid border-2 border-lightGrey flex justify-center items-center"><img className='h-[35px] rounded-full' src={sample}  alt="" /></div>
+                <div className="logo h-[48px] w-[48px] rounded-full  border-solid border-2 border-lightGrey flex justify-center items-center"><img className='h-[30px] rounded-full' src={sample}  alt="" /></div>
                 <div>
-                  <div className='font-semibold text-black'>State Bank of India</div>
-                  <div className='text-sm font-medium text-darkGrey'>SBI</div>
+                  <div className='font-semibold text-black text-sm'>State Bank of India</div>
+                  <div className='text-xs font-medium text-darkGrey'>SBI</div>
                 </div>
                 </div>
                 <div className='flex flex-col justify-center items-end'>
-                  <div className='text-black font-semibold'>₹122.75</div>
-                  <div className='text-sm text-seaGreen font-semibold'>▲ 3.77%</div>
+                  <div className='text-black  text-sm font-semibold'>₹122.75</div>
+                  <div className='text-xs text-seaGreen font-semibold'>▲ 3.77%</div>
                 </div>
             </div>
             <div className="item flex justify-between items-center pt-2 pb-2 border-b border-solid border-lightGrey ">
                 <div className='flex justify-center items-center gap-2'>
                 <div className="logo h-[48px] w-[48px] rounded-full border-solid border-2 border-lightGrey flex justify-center items-center"><img className='h-[35px] rounded-full' src={sample}  alt="" /></div>
                 <div>
-                  <div className='font-semibold text-black'>State Bank of India</div>
-                  <div className='text-sm font-medium text-darkGrey'>SBI</div>
+                  <div className='font-semibold text-black text-sm'>State Bank of India</div>
+                  <div className='text-xs font-medium text-darkGrey'>SBI</div>
                 </div>
                 </div>
                 <div className='flex flex-col justify-center items-end'>
-                  <div className='text-black font-semibold'>₹122.75</div>
-                  <div className='text-sm text-seaGreen font-semibold'>▲ 3.77%</div>
+                  <div className='text-black  text-sm font-semibold'>₹122.75</div>
+                  <div className='text-xs text-seaGreen font-semibold'>▲ 3.77%</div>
                 </div>
             </div>
             
@@ -52,13 +52,13 @@ const TopLosers = () => {
                 <div className="logo h-[48px] w-[48px] rounded-full  border-solid border-2 border-lightGrey flex justify-center items-center"><img className='h-[35px] rounded-full' src={sample2}  alt="" /></div>
                 
                 <div>
-                  <div className='font-semibold text-black'>Punjab National Bank</div>
-                  <div className='text-sm font-medium text-darkGrey'>PnB</div>
+                  <div className='font-semibold text-black text-sm'>Punjab National Bank</div>
+                  <div className='text-xs font-medium text-darkGrey'>PnB</div>
                 </div>
                 </div>
                 <div className='flex flex-col justify-center items-end'>
-                  <div className='text-black font-semibold'>₹300.75</div>
-                  <div className='text-sm text-red font-semibold'>▼ 0.77%</div>
+                  <div className='text-black text-sm  font-semibold'>₹300.75</div>
+                  <div className='text-xs text-red font-semibold'>▼ 0.77%</div>
                 </div>
             </div>
   </div>
@@ -85,14 +85,14 @@ const TopGnL = () => {
                 <Tabs value="gainers">
                     <TabsHeader>
                         {data.map(({ label, value }) => (
-                            <Tab key={value} value={value}>
+                            <Tab key={value} value={value} className='font-medium text-sm text-darkBlue '>
                                 {label}
                             </Tab>
                         ))}
                     </TabsHeader>
                     <TabsBody>
                         {data.map(({ value, component }) => (
-                            <TabPanel key={value} value={value}>
+                            <TabPanel className='p-3' key={value} value={value}>
                                 {component}
                             </TabPanel>
                         ))}
