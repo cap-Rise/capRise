@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 
 import jiya from '../assets/jiya.png';
 import Holdings from '../components/Holdings';
+import Orders from '../components/Orders';
 
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState('Holdings');
@@ -24,7 +25,7 @@ const Portfolio = () => {
       case 'Holdings':
         return <div><Holdings/></div>;
       case 'Orders':
-        return <div>Orders Content</div>;
+        return <div><Orders/></div>;
       case 'History':
         return <div>History Content</div>;
       default:
@@ -41,7 +42,7 @@ const Portfolio = () => {
             <div className="flex justify-between">
               <p className='font-black text-xl flex justify-center items-center text-white'>Portfolio</p>
               <div className="profile">
-                <img className='rounded-full w-[38px] h-[38px] border border-black' src={jiya} alt="Profile" />
+                <img className='rounded-full w-8 h-8 border border-black' src={jiya} alt="Profile" />
               </div>
             </div>
             <div className="relative flex p-3 pt-5 justify-between items-center">

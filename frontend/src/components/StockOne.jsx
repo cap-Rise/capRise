@@ -4,9 +4,9 @@ import sbi from "../assets/SbiSvg.svg"
 
 const StockOne = ({stockName,quantity,ltp,amountUsed,type,imgSrc}) => {
     return (
-        <div className=' shadow-lg drop-shadow-lg relative flex p-4 items-center justify-center h-[200px] w-[90%] rounded-[16px] bg-[#D9D9D9] '>
+        <div className=' shadow-lg drop-shadow-lg  flex p-4 items-center justify-center h-[200px]  rounded-[16px] bg-lightGrey bg-opacity-45 '>
             <div className='absolute top-0 right-8 '>
-                <BuySellTag type={type} />
+                <BuySellTag  type={type} />
             </div>
             <div className='h-full space-y-6 w-full'>
                 <div className=' flex items-center justify-start '>
@@ -57,10 +57,10 @@ const StockOne = ({stockName,quantity,ltp,amountUsed,type,imgSrc}) => {
                 </div>
                 <div className='flex items-center justify-cente gap-4'>
                     <div className='flex w-[50%] items-center justify-center'>
-                        <button className='bg-white border-solid border rounded-lg border-[#747474] text-[#060F66] w-[100%] p-2 ' onClick={() => { alert("Hello") }}>Cancel</button>
+                        <button className='bg-white border-solid border rounded-lg text-base border-[#747474] text-[#060F66] w-[100%] p-2 ' onClick={() => { alert("Hello") }}>Cancel</button>
                     </div>
                     <div className='flex w-[50%] items-center justify-center'>
-                        <button className='bg-[#060F66] rounded-lg text-white w-[100%] p-2 ' onClick={() => { alert("Hello") }}>Modify</button>
+                        <button className='bg-[#060F66] rounded-lg text-base text-white w-[100%] p-2 ' onClick={() => { alert("Hello") }}>Modify</button>
                     </div>
                 </div>
             </div>

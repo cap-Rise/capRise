@@ -1,5 +1,5 @@
 import React from 'react'
-import mastercard from "../assets/mastercard.svg"
+import mastercard from "../assets/mastercard_logo.png"
 
 import CreditCard from '../components/CreditCard'
 import BuySellTag from '../components/BuySellTag'
