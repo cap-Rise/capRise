@@ -69,7 +69,7 @@ const Navbar = () => {
   const location = useLocation();
   return (
     <div>
-      <div className=" fixed z-10 pl-5 pr-5 grid grid-cols-5 place-items-center gap-3  bottom-0 w-full h-16  bg-white shadow-[0_0_15px_4px_#d3d3d3]">
+      <div className=" fixed z-10 pl-4 pr-4 grid grid-cols-5 place-items-center gap-3  bottom-0 w-full h-16  bg-white shadow-[0_0_15px_4px_#d3d3d3]">
         
       <Link to="/home">
           <button className='w-fit h-full'>
