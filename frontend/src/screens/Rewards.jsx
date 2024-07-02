@@ -13,9 +13,9 @@ const Rewards = () => {
       <Navbar />
       <div className='flex flex-col gap-8 pb-32'>
         <div className="header bg-darkBlue p-5 flex justify-between w-full">
-          <p className=' font-extrabold text-2xl flex justify-center items-center text-white '>Rewards</p>
+          <p className=' font-extrabold text-xl flex justify-center items-center text-white '>Rewards</p>
           <div className="profile">
-            <img className='rounded-full w-[38px] h-[38px] border border-black' src={jiya} alt="" />
+            <img className='rounded-full w-8 h-8 border border-black' src={jiya} alt="" />
           </div>
         </div>
         <div className="cc flex justify-center items-center">
@@ -24,11 +24,11 @@ const Rewards = () => {
 
         <div className="coupons pl-5 pr-5">
           <div className="grid grid-cols-2 place-items-center place-content-center gap-y-7 gap-x-4">
-            <RewardCard/>
-            <RewardCard/>
-            <RewardCard/>
-            <RewardCard/>
-            <RewardCard/>
+            <RewardCard  cash="100" pts="20000"/>
+            <RewardCard cash="100" pts="20000"/>
+            <RewardCard cash="100" pts="20000"/>
+            <RewardCard cash="100" pts="20000"/>
+            <RewardCard cash="100" pts="20000"/>
           </div>
         </div>
       </div>

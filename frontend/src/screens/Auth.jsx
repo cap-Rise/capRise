@@ -25,12 +25,12 @@ const Auth = () => {
   return (
     <div>
       <div className='background w-[100vw] h-[100vh] flex justify-center'>
-        <div className='flex flex-col gap-8 p-5 '>
+        <div className='flex flex-col gap-10 p-5 '>
           <div className=" title flex flex-col gap-7  ">
             <div className=" pt-12 flex justify-center items-center">
-              <img src={logo} className='w-[70%]' alt="" />
+              <img src={logo} className='w-[60%]' alt="" />
             </div>
-            <div className='font-extrabold text-3xl text-darkGrey text-center'>Sign Up</div>
+            <div className='font-extrabold text-2xl text-darkGrey text-center'>Sign Up</div>
           </div>
 
           <div>
@@ -39,9 +39,9 @@ const Auth = () => {
 
           <div className="flex flex-col gap-3">
             <a href='http://localhost:5000/auth/google'>
-              <Button className=" bg-white shadow-2xl h-[3.8rem] w-full gap-3 ">
+              <Button className=" bg-white shadow-lg drop-shadow-xl h-[3.5rem] w-full gap-3 ">
                 <div className="google">
-                  <img src={gLogo} alt="" />
+                  <img src={gLogo} className='h-[23px] w-[23px]' alt="" />
 
                 </div>
                 <div className='font-medium text-lg'>
@@ -49,14 +49,14 @@ const Auth = () => {
                 </div>
               </Button>
             </a>
-            <div className='or font-medium text-2xl'>OR</div>
-            <Link to="/signup"><Button className=" h-[3.8rem] w-full    font-medium text-lg">
+            <div className='or font-medium text-xl'>OR</div>
+            <Link to="/signup"><Button className=" h-[3rem] w-full text-white   font-medium text-lg">
               Sign Up with email
             </Button></Link>
 
           </div>
 
-          <div className=' font-medium text-sm text-lightGrey text-center '>
+          <div className=' font-medium text-xs text-lightGrey text-center '>
             By signing up you agree our <span className=' text-darkBlue cursor-pointer'><u>Terms and Conditions</u></span>
           </div>
 

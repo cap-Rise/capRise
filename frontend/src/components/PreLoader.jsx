@@ -13,12 +13,12 @@ const PreLoader = () => {
         <div className=" background w-[100vw] h-[100vh] flex justify-center items-end ">
           <div className="assets flex h-[80%] flex-col justify-center items-center gap-[30%]">
             <div className="logo flex justify-center items-center  ">
-              <img src={logoBlue} alt="logo" />
+              <img src={logoBlue} width="270" alt="logo" />
             </div>
-            <div className='flex flex-col justify-center items-center gap-5 '>
+            <div className='flex flex-col justify-around items-center gap-7 '>
             <div className="other flex gap-[10px]">
               <div>
-                <img src={safe} alt="" />
+                <img src={safe} className='w-[6rem]' alt="" />
               </div>
               <div>
                 <img src={makeInIndia} className='w-[5rem]' alt="" />
@@ -29,7 +29,7 @@ const PreLoader = () => {
 
             </div>
             <div>
-              <p className=' font-bold text-xs text-darkGrey '>*<u>Investments are subjected to market risks.</u></p>
+              <p className=' font-bold text-[10px] text-darkGrey '>*<u>Investments are subjected to market risks.</u></p>
             </div>
 
             </div>

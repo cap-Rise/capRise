@@ -77,33 +77,34 @@ const SignUp = () => {
   };
 
   return (
-    <div className='background w-[100vw] h-[100vh] flex justify-center'>
-      <div className='flex flex-col gap-7 w-[80%] '>
+    <div className='background w-[100vw] h-[100vh] p-5 flex justify-center'>
+      <div className='flex flex-col gap-7 w-full '>
         <div className=" title flex flex-col gap-7  ">
           <div className=" pt-16 flex justify-center items-center">
-            <img src={logo} className='w-[80%]' alt="" />
+            <img src={logo} className='w-[60%]' alt="" />
           </div>
-          <div className='font-extrabold text-3xl text-darkGrey text-center'>Sign Up</div>
+          <div className='font-extrabold text-2xl text-darkGrey text-center'>Sign Up</div>
         </div>
 
-        <div className='form  '>
+        <div className='form mt-3 '>
           <div className='flex flex-col gap-4'>
             <div className='flex flex-col gap-1 w-full'>
               <label className=' text-darkBlue font-semibold text-base' htmlFor="username">Username:</label>
               <input
-                className=' w-full h-12  p-3 font-medium  border-[2px] rounded-lg  '
+                className=' w-full h-12  p-3 font-medium  border border-lightGrey border-solid rounded-lg  '
                 type="text"
                 id="username"
                 name="username"
+                placeholder='User123'
                 value={formData.username}
                 onChange={handleChange}
                 required
               />
             </div>
             <div className='flex flex-col gap-1 w-full'>
-              <label className=' text-darkBlue font-semibold text-base' htmlFor="email">Email:</label>
+              <label className=' text-darkBlue  font-semibold text-base' htmlFor="email">Email:</label>
               <input
-                className=' w-full h-12  p-3 font-medium  border-[2px] rounded-lg  '
+                className=' w-full h-12  p-3 font-medium  border border-lightGrey border-solid  rounded-lg  '
                 type="email"
                 id="email"
                 name="email"
@@ -116,7 +117,7 @@ const SignUp = () => {
             <div className='flex flex-col gap-1 w-full'>
               <label className=' text-darkBlue font-semibold text-base' htmlFor="pin">Set PIN:</label>
               <input
-                className=' w-full h-12  p-3 font-medium  border-[2px] rounded-lg  '
+                className=' w-full h-12  p-3 font-medium   border border-lightGrey border-solid  rounded-lg  '
                 placeholder='Enter 4 digit pin'
                 type="password"
                 id="pin"
@@ -129,7 +130,7 @@ const SignUp = () => {
             <div className='flex flex-col gap-1 w-full'>
               <label className=' text-darkBlue font-semibold text-base' htmlFor="confirmPin">Confirm PIN:</label>
               <input
-                className=' w-full h-12  p-3 font-medium  border-[2px] rounded-lg  '
+                className=' w-full h-12  p-3 font-medium   border border-lightGrey border-solid  rounded-lg  '
                 placeholder='Enter 4 digit pin'
                 type="password"
                 id="confirmPin"
@@ -141,13 +142,13 @@ const SignUp = () => {
               {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
             </div>
 
-            <Button onClick={handleSignUp} className="mt-5 h-[3.8rem] w-full text-white  font-medium text-lg">
+            <Button onClick={handleSignUp} className="mt-5 h-[3.2rem] w-full text-white  font-medium text-base">
               Sign Up
             </Button>
           </div>
         </div>
 
-        <div className=' font-medium text-sm text-lightGrey text-center '>
+        <div className=' font-medium text-xs text-lightGrey text-center '>
           By signing up you agree our <span className=' text-darkBlue cursor-pointer'><u>Terms and Conditions</u></span>
         </div>
       </div>

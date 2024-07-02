@@ -100,22 +100,22 @@ const Pin = () => {
           }
         `}
       </style>
-      <div className='background w-[100vw] h-[100vh] flex justify-center'>
-        <div className='flex flex-col gap-9 w-[90%]'>
+      <div className='background w-[100vw] h-[100vh] flex  p-5 justify-center'>
+        <div className='flex flex-col gap-8 w-full'>
           <div className=" title flex flex-col gap-7  ">
-            <div className=" pt-16 flex justify-center items-center">
-              <img src={logo} className='w-[70%]' alt="" />
+            <div className=" pt-10 flex justify-center items-center">
+              <img src={logo} className='w-[60%]' alt="" />
             </div>
-            <div className='font-extrabold text-3xl text-darkGrey text-center'>Welcome back!</div>
+            <div className='font-extrabold text-2xl text-darkGrey text-center'>Welcome back!</div>
           </div>
           <div className='flex flex-col items-center gap-4 '>
-            <div className="avtaar flex flex-col  w-  items-center  ">
-              <img className='rounded-full w-[50%] border border-black' src={jiya} alt="" />
-            </div><Button></Button>
-            <div className='font-bold text-2xl text-darkGrey text-center uppercase'>{userData.name}</div>
+            <div className="avtaar flex flex-col  w-full  items-center  ">
+              <img className='rounded-full w-[40%] border-[3px] border-lightGrey border-solid' src={jiya} alt="" />
+            </div>
+            <div className='font-bold text-[22px]  text-darkGrey text-center uppercase'>{userData.name}</div>
           </div>
           <div className='flex flex-col justify-center items-center gap-4'>
-            <div className="flex text-xl font-bold text-black justify-center items-center">Enter you Pin</div>
+            <div className="flex text-base font-bold text-black justify-center items-center">Enter you Pin</div>
             <div className="flex flex-col justify-center items-center gap-[5rem] w-full">
               <PinInput
                 ref={pinInputRef}
