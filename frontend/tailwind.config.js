@@ -13,7 +13,13 @@ module.exports = withMT({
         seaGreen: "#00D09C",
         lightGrey:"#D9D9D9",
         darkGrey:"#747474",
+        dropdownHover: '#2B6CB0',
       },
+    },
+  },
+  variants: {
+    extend: {
+      backgroundColor: ['hover', 'focus'],
     },
   },
   plugins: [],

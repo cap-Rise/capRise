@@ -4,7 +4,7 @@ import jiya from '../assets/jiya.png';
 import Holdings from '../components/Holdings';
 import Orders from '../components/Orders';
 import Plus from '../assets/Plus.png';
-
+import History from '../components/History'
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState('Holdings');
   const [barPosition, setBarPosition] = useState(0);
@@ -27,7 +27,7 @@ const Portfolio = () => {
       case 'Orders':
         return <div><Orders /></div>;
       case 'History':
-        return <div>History Content</div>;
+        return <div><History/></div>;
       default:
         return null;
     }
