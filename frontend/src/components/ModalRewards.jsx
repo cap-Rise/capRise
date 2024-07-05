@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Button } from './Button';
 
+
 const ModalRewards = ({ isOpen, closeModal, cash, pts }) => {
   const [pnlBalance, setPnlBalance] = useState(50000);
   useEffect(() => {
@@ -21,11 +22,11 @@ const ModalRewards = ({ isOpen, closeModal, cash, pts }) => {
   const pnlBalanceLeft = pnlBalance - rewardDeduction;
 
   return (
-    <div className="modal-overlay fixed top-0 left-0 w-full h-full flex justify-center items-end z-50 bg-black bg-opacity-50">
-      <div className="modal-content rounded-t-[2.3rem] bg-white flex justify-center h-[23rem] w-full relative">
+    <div className={`modal-overlay fixed top-0 left-0 w-full h-full flex justify-center items-end z-50 bg-black bg-opacity-50 ${isOpen ? 'open' : ''}`}>
+      <div className="modal-content rounded-t-[2.3rem] bg-white flex justify-center h-[23rem] w-full relative slide-in-bottom">
         <div className="w-full p-8 pr-8 pl-8 flex flex-col gap-8">
           <h2 className="text-base font-bold flex items-center justify-center">Summary</h2>
-          <div className="main flex flex-col gap-5">
+          <div className="main flex flex-col gap-[1.2rem]">
             <div className="flex justify-between items-center">
               <p className="text-darkGrey text-xs font-bold">Current PnL</p>
               <p className="font-bold text-black text-xs">₹{pnlBalance}</p>

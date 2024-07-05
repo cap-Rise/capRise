@@ -4,7 +4,7 @@ import sbi from "../assets/SbiSvg.svg"
 
 const StockOne = ({stockName,quantity,ltp,amountUsed,type,imgSrc}) => {
     return (
-        <div className=' shadow-lg drop-shadow-lg  flex p-4 items-center justify-center   rounded-[16px] bg-lightGrey bg-opacity-45 '>
+        <div className=' shadow-lg drop-shadow-lg  flex p-4 items-center justify-center  rounded-[16px] bg-lightGrey bg-opacity-45 '>
             <div className='absolute top-0 right-8 '>
                 <BuySellTag  type={type} />
             </div>
