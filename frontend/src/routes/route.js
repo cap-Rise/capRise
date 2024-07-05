@@ -12,6 +12,7 @@ import Trading from '../screens/Trading'
 import Rewards from '../screens/Rewards'
 import Admin from "../screens/Admin";
 import AddFunds from "../screens/AddFunds";
+import Success from "../screens/Success";
 
 const routes =[
     {
@@ -61,6 +62,10 @@ const routes =[
     {
         path : "/addfunds",
         element: <AddFunds/> ,
+    },
+    {
+        path : "/success",
+        element: <Success/> ,
     },
    
    
