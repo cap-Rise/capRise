@@ -110,7 +110,7 @@
   filter: blur(5px);
 }
 
-/* ModalRewards.css */
+
 @keyframes slideUp {
   from {
     transform: translateY(100%);
