@@ -22,6 +22,7 @@ connectTOMongo();
 app.use('/auth',require('./routes/auth'));
 app.use('/stock',require('./routes/stock'));
 app.use('/reward',require('./routes/reward'));
+app.use('/payment',require('./routes/razorpay'));
 
 app.get('/', (req, res) => {
     res.send('<a href="auth/google" >Authenticate with Google</a>')
