@@ -114,7 +114,11 @@
   filter: blur(5px);
 }
 
-/* ModalRewards.css */
+.ticket{
+  background: url('./assets/ticket.png');
+  background-size: cover;
+  
+}
 @keyframes slideUp {
   from {
     transform: translateY(100%);
