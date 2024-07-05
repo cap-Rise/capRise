@@ -110,7 +110,11 @@
   filter: blur(5px);
 }
 
-
+.ticket{
+  background: url('./assets/ticket.png');
+  background-size: cover;
+  
+}
 @keyframes slideUp {
   from {
     transform: translateY(100%);
