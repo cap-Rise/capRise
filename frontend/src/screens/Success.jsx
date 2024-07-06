@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import ticket from '../assets/ticket.png';
 import tick from '../assets/tick.png';
 import BalanceCard from '../components/BalanceCard';
@@ -6,11 +7,13 @@ import bag from '../assets/bag.svg';
 import confetti from 'canvas-confetti';
 
 const Success = () => {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const trancid = queryParams.get('trancid');
 
   useEffect(() => {
-   
     const triggerConfetti = () => {
-      const duration = 0.2 * 1000; 
+      const duration = 0.2 * 1000;
       const end = Date.now() + duration;
 
       const frame = () => {
@@ -37,7 +40,6 @@ const Success = () => {
       frame();
     };
 
-    
     triggerConfetti();
   }, []);
 
@@ -58,7 +60,7 @@ const Success = () => {
               <div className='flex flex-col items-start pt-10 gap-4'>
                 <div className='text-xs font-bold'>Transaction details:</div>
                 <div className='text-xs font-bold'>Order ID - order_pay442315</div>
-                <div className='text-xs font-bold'>Transaction Details - order_pay442315</div>
+                <div className='text-xs font-bold'>Transaction ID - {trancid}</div>
               </div>
               <div className='h-20 p-4 rounded-2xl bg-white w-full'>
                 <div className='flex justify-between items-center'>
