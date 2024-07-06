@@ -115,6 +115,8 @@
   background-size: cover;
   
 }
+
+
 @keyframes slideUp {
   from {
     transform: translateY(100%);
@@ -124,18 +126,39 @@
   }
 }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
 .modal-overlay.open .modal-content {
   animation: slideUp 0.3s ease-out forwards;
 }
+
+.modal-overlay.closed .modal-content {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+.modal-overlay {
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.modal-overlay.closed {
+  opacity: 0;
+}
+
 
 .no-scroll {
   overflow: hidden;
 }
 
 
-.slide-in-bottom {
-  transform: translateY(100%);
-}
+
 
 
 
