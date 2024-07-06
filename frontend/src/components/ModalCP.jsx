@@ -1,27 +1,32 @@
-import React, { useEffect , useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from './Button';
 
 const ModalCP = ({ isOpen, closeModal, amount }) => {
-  const [balance, setBalance] = useState(200); 
+  const [balance, setBalance] = useState(200);
+  const [shouldRender, setShouldRender] = useState(isOpen);
 
   useEffect(() => {
     if (isOpen) {
+      setShouldRender(true);
       document.body.classList.add('no-scroll');
     } else {
       document.body.classList.remove('no-scroll');
+      setTimeout(() => setShouldRender(false), 300); 
     }
     return () => {
       document.body.classList.remove('no-scroll');
     };
   }, [isOpen]);
 
-  if (!isOpen) return null;
+  const pointsCredited = amount * 1000;
+  const totalPoints = pointsCredited + balance;
 
-  const pointsCredited = amount * 1000; 
-  const totalPoints=pointsCredited+balance;
+  if (!shouldRender) return null;
 
   return (
-    <div className={` modal-overlay fixed top-0 left-0 w-full h-full flex justify-center items-end z-[10000] ${isOpen ? 'open ' : ' '}`}>
+    <div
+      className={`modal-overlay fixed top-0 left-0 w-full h-full flex justify-center items-end z-[10000] ${isOpen ? 'open' : 'closed'}`}
+    >
       <div className='modal-content rounded-t-[2.3rem] bg-white flex justify-center h-[23rem] w-full relative'>
         <div className='w-full p-8 pr-8 pl-8 flex flex-col gap-8'>
           <h2 className='text-base font-bold flex items-center justify-center'>Buy Points</h2>
@@ -44,10 +49,15 @@ const ModalCP = ({ isOpen, closeModal, amount }) => {
             </div>
           </div>
           <div className='flex justify-center gap-5 items-center w-full'>
-            <Button onClick={closeModal} className='bg-white text-darkBlue h-10 w-full p-1 shadow-md drop-shadow-lg text-base border-[3px] border-solid border-darkBlue'>
+            <Button
+              onClick={closeModal}
+              className='bg-white text-darkBlue h-10 w-full p-1 shadow-md drop-shadow-lg text-base border-[3px] border-solid border-darkBlue'
+            >
               Back
             </Button>
-            <Button className='w-full text-white p-1 border-[3px] border-solid h-10 text-base shadow-md drop-shadow-lg border-darkBlue'>Proceed</Button>
+            <Button className='w-full text-white p-1 border-[3px] border-solid h-10 text-base shadow-md drop-shadow-lg border-darkBlue'>
+              Proceed
+            </Button>
           </div>
         </div>
       </div>

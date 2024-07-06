@@ -7,19 +7,22 @@ const Caprise = ({ openModal, setAmount }) => {
   const [amountError, setAmountError] = useState('');
 
   const handleProceed = () => {
+    const amountNumber = Number(amount);
     if (amount.trim() === '') {
-      setAmountError('Please enter the amount.'); 
+      setAmountError('Please enter the amount.');
+    } else if (amountNumber < 100) {
+      setAmountError('Amount must be at least Rs100.');
     } else {
       setAmount(amount);
       openModal();
-      setAmountError(''); 
+      setAmountError('');
     }
   };
 
   const handleAmountChange = (event) => {
     setLocalAmount(event.target.value);
     if (event.target.value.trim() !== '') {
-      setAmountError(''); 
+      setAmountError('');
     }
   };
 
@@ -31,8 +34,10 @@ const Caprise = ({ openModal, setAmount }) => {
         </div>
         <div className='flex flex-col items-center justify-center w-full gap-4'>
           <div className='text-base font-bold text-darkBlue'>Buy CapRise Points</div>
-          <div className='border-solid border-t border-b p-2 w-[14rem] '>
+          <div className='border-solid border-t border-b p-2 w-[14rem]'>
             <input
+              type='number' 
+              min='100' 
               className='text-center text-black font-semibold w-full'
               placeholder='Enter Amount'
               value={amount}
@@ -40,10 +45,10 @@ const Caprise = ({ openModal, setAmount }) => {
               required
             />
           </div>
-          {amountError && <p className='text-red text-[10px] font-bold'>{amountError}</p>} 
+          {amountError && <p className='text-red text-[10px] font-bold'>{amountError}</p>}
         </div>
         <div className='flex w-full flex-col p-4 border-t border-b border-lightGrey border-solid'>
-          <div className='text-[10px] text-darkGrey font-bold uppercase '>
+          <div className='text-[10px] text-darkGrey font-bold uppercase'>
             *<span className='underline'>Note</span>
           </div>
           <div className='text-[10px] font-semibold text-darkGrey'>
