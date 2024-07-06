@@ -106,6 +106,7 @@
 }
 
 
+
 .blur-effect {
   filter: blur(5px);
 }
@@ -151,7 +152,6 @@
 .modal-overlay.closed {
   opacity: 0;
 }
-
 
 .no-scroll {
   overflow: hidden;

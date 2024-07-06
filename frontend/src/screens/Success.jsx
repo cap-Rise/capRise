@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import ticket from '../assets/ticket.png';
+import { Link } from 'react-router-dom';
+
 import tick from '../assets/tick.png';
 import BalanceCard from '../components/BalanceCard';
 import bag from '../assets/bag.svg';
 import confetti from 'canvas-confetti';
+import { Button } from '../components/Button';
 
 const Success = () => {
   const location = useLocation();
@@ -44,20 +46,24 @@ const Success = () => {
   }, []);
 
   return (
-    <div className='w-full h-[100vh]'>
-      <div className=" w-full h-full flex items-center justify-center p-5 ">
-        <div className='relative w-full flex justify-center'>
-          <div className='h-48 absolute -top-24 flex justify-center items-center w-48 bg-darkBlue rounded-full bg-opacity-30'>
-            <div className='h-36 w-36 rounded-full bg-darkBlue flex justify-center items-center'>
-              <img src={tick} width='60' alt="" />
+    <div className='w-full h-fit p-5'>
+      <div className='w-full h-[85vh] flex justify-center items-center '>
+     <div className='p-4 w-full'>
+        <div className='w-full h-[31rem] bg-lightGrey rounded-3xl flex  justify-center  relative'>
+        <div className='h-44 absolute -top-24 flex justify-center items-center w-44 bg-darkBlue rounded-full bg-opacity-30'>
+            <div className='h-32 w-32 rounded-full bg-darkBlue flex justify-center items-center'>
+              <img src={tick} width='55' alt="" />
             </div>
           </div>
-          <div className='h-[34rem] w-full ticket flex flex-col justify-center items-center'>
-            <div className='w-[70%] flex flex-col items-center gap-6'>
-              <div className='text-black text-xl flex justify-center items-center font-bold p-11 border-b-2 border-black border-dashed'>
+            <div className='w-8 h-8 bg-white rounded-full absolute -left-4  top-[35%]'></div>
+            <div className='w-8 h-8 bg-white rounded-full absolute -right-4 top-[35%]'></div>
+
+            <div className=' w-full  flex flex-col justify-end p-5 items-center'>
+            <div className='w-full pr-5 pl-5 flex flex-col items-center gap-6'>
+              <div className='w-full text-black text-xl flex justify-center items-center font-bold pt-13  pb-11 border-b-2 border-black border-dashed'>
                 Payment Success
               </div>
-              <div className='flex flex-col items-start pt-10 gap-4'>
+              <div className='flex flex-col w-full items-start pt-10 gap-4'>
                 <div className='text-xs font-bold'>Transaction details:</div>
                 <div className='text-xs font-bold'>Order ID - order_pay442315</div>
                 <div className='text-xs font-bold'>Transaction ID - {trancid}</div>
@@ -75,7 +81,9 @@ const Success = () => {
             </div>
           </div>
         </div>
-      </div>
+    </div>
+    </div>
+    <Link to='/addfunds'><Button className='w-full h-[3.5rem] text-white'>Done</Button></Link>
     </div>
   );
 };

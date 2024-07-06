@@ -42,7 +42,7 @@ const Portfolio = () => {
         </div>
         <div>
           <div className="header bg-darkBlue p-5 w-full">
-            <div className="flex justify-between">
+            <div className="flex justify-between ">
               <p className='font-black text-xl flex justify-center items-center text-white'>Portfolio</p>
               <div className="profile">
                 <img className='rounded-full w-8 h-8 border border-black' src={jiya} alt="Profile" />

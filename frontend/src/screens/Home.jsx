@@ -9,6 +9,7 @@ import whiteLogo from '../assets/logo_white.png';
 import LearnCards from '../components/LearnCards';
 import TopPortfolioCard from '../components/TopPortfolioCard';
 import TopGnL from '../components/TopGnL';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -30,13 +31,13 @@ const Home = () => {
 
       {/* HOME */}
       <div className='flex flex-col gap-8'>
-        <div className="header bg-darkBlue p-5 flex justify-between w-full">
+        <div className="header bg-darkBlue p-5 h-20 items-center flex justify-between w-full">
           <div className="logowhite">
             <img src={whiteLogo} className='h-9' alt="" />
           </div>
           <div className="icons flex gap-4">
             <div className="addFunds">
-              <img src={rupee} className='w-8 h-8' alt="" />
+              <Link to='/addfunds'><img src={rupee} className='w-8 h-8' alt="" /></Link>
             </div>
             <img className='rounded-full w-8 h-8 border border-black' src={jiya} alt="" />
           </div>

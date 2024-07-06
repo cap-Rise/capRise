@@ -16,7 +16,7 @@ const Rewards = () => {
   return (
     <div id="rewards-container" className="h-fit w-[100vw]">
       <Navbar />
-      <div className="header bg-darkBlue  h-20 p-5 flex justify-between w-full">
+      <div className="header bg-darkBlue  h-20 p-5 items-center flex justify-between w-full">
           <p className="font-extrabold text-xl flex justify-center items-center text-white">Rewards</p>
           <div className="profile flex items-center justify-center">
             <img className="rounded-full w-8 h-8 border border-black" src={jiya} alt="" />
