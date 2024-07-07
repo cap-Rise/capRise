@@ -13,6 +13,7 @@ import Rewards from '../screens/Rewards'
 import Admin from "../screens/Admin";
 import AddFunds from "../screens/AddFunds";
 import Success from "../screens/Success";
+import Profile from "../screens/Profile";
 
 const routes =[
     {
@@ -67,7 +68,10 @@ const routes =[
         path : "/success",
         element: <Success/> ,
     },
-   
+    {
+        path : "/profile",
+        element: <Profile/> ,
+    },
    
 
 ];

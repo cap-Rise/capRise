@@ -39,7 +39,7 @@ const Home = () => {
             <div className="addFunds">
               <Link to='/addfunds'><img src={rupee} className='w-8 h-8' alt="" /></Link>
             </div>
-            <img className='rounded-full w-8 h-8 border border-black' src={jiya} alt="" />
+            <Link to='/profile'><img className='rounded-full w-8 h-8 border border-black' src={jiya} alt="" /></Link>
           </div>
         </div>
 
