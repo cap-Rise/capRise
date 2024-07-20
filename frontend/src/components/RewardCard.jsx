@@ -27,7 +27,7 @@ const RewardCard = ({ cash, pts }) => {
           <Button className="text-white text-xs w-full h-8" onClick={openModal}>Redeem</Button>
         </div>
       </div>
-      <ModalRewards isOpen={isModalOpen} closeModal={closeModal} cash={cash} pts={pts} />
+      <ModalRewards isOpen={isModalOpen} closeModal={closeModal} cash={Number(cash)} pts={Number(pts)} />
     </div>
   );
 };
