@@ -8,6 +8,7 @@ const AuthState = (props) => {
   const [Name, setName] = useState("Toyash");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [amount, setAmount] = useState('');
+  const [totalPts, setTotalPts] = useState(0);
 
   const getUser = async () => {
     const host = "http://localhost:5000";
@@ -81,6 +82,8 @@ const AuthState = (props) => {
         closeModal,
         amount,
         setAmount,
+        totalPts, 
+        setTotalPts, 
       }}
     >
       {props.children}

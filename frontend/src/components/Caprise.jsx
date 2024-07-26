@@ -18,6 +18,7 @@ const Caprise = ({ openModal, setAmount }) => {
       setAmountError('');
     }
   };
+  
 
   const handleAmountChange = (event) => {
     setLocalAmount(event.target.value);
@@ -36,8 +37,8 @@ const Caprise = ({ openModal, setAmount }) => {
           <div className='text-base font-bold text-darkBlue'>Buy CapRise Points</div>
           <div className='border-solid border-t border-b p-2 w-[14rem]'>
             <input
-              type='number' 
-              min='100' 
+              type='number'
+              min='100'
               className='text-center text-black font-semibold w-full'
               placeholder='Enter Amount'
               value={amount}

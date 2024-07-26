@@ -14,6 +14,7 @@ import Admin from "../screens/Admin";
 import AddFunds from "../screens/AddFunds";
 import Success from "../screens/Success";
 import Profile from "../screens/Profile";
+import Success2 from "../screens/Success2";
 
 const routes =[
     {
@@ -67,6 +68,10 @@ const routes =[
     {
         path : "/success",
         element: <Success/> ,
+    },
+    {
+        path : "/successPts",
+        element: <Success2/> ,
     },
     {
         path : "/profile",
