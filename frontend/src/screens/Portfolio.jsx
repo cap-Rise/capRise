@@ -5,6 +5,7 @@ import Holdings from '../components/Holdings';
 import Orders from '../components/Orders';
 import Plus from '../assets/Plus.png';
 import History from '../components/History'
+import { Link } from 'react-router-dom';
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState('Holdings');
   const [barPosition, setBarPosition] = useState(0);
@@ -45,7 +46,7 @@ const Portfolio = () => {
             <div className="flex justify-between ">
               <p className='font-black text-xl flex justify-center items-center text-white'>Portfolio</p>
               <div className="profile">
-                <img className='rounded-full w-8 h-8 border border-black' src={jiya} alt="Profile" />
+                <Link to='/profile'><img className='rounded-full w-8 h-8 border border-black' src={jiya} alt="Profile" /></Link>
               </div>
             </div>
             <div className="relative flex p-3 pt-5 justify-between items-center">

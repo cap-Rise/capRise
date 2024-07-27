@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import CreditCard from '../components/CreditCard';
 import jiya from '../assets/jiya.png';
 import RewardCard from '../components/RewardCard';
+import { Link } from 'react-router-dom';
 
 const Rewards = () => {
   const reward = [
@@ -19,7 +20,7 @@ const Rewards = () => {
       <div className="header bg-darkBlue  h-20 p-5 items-center flex justify-between w-full">
           <p className="font-extrabold text-xl flex justify-center items-center text-white">Rewards</p>
           <div className="profile flex items-center justify-center">
-            <img className="rounded-full w-8 h-8 border border-black" src={jiya} alt="" />
+          <Link to='/profile'><img className='rounded-full w-8 h-8 border border-black' src={jiya} alt="Profile" /></Link>
           </div>
         </div>
       <div className="flex flex-col gap-8 pb-32 p-5">

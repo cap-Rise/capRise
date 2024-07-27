@@ -9,10 +9,14 @@ import {
 import Money from '../components/Money';
 import Caprise from '../components/Caprise';
 import ModalCP from'../components/ModalCP'
+import arrow from '../assets/Arrow.svg'
+import { useNavigate } from 'react-router';
+
 
 const AddFunds = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [amount, setAmount] = useState('');
+  const navigate = useNavigate(); 
 
   const openModal = () => {
     console.log(true);
@@ -37,9 +41,14 @@ const AddFunds = () => {
     },
   ];
 
+  const handleback=()=>{
+    navigate(-1)
+  }
+
   return (
     <div className='h-[100vh] w-[100vw] flex flex-col overflow-hidden'>
-      <div className='header bg-darkBlue p-5 flex justify-between w-full'>
+      <div className='header bg-darkBlue p-5 flex items-center gap-6 w-full'>
+        <img src={arrow} alt="" className='h-11 ' onClick={handleback}/>
         <p className='font-extrabold text-xl flex justify-center items-center text-white'>Wallet</p>
       </div>
       <div className={`p-5 w-full ${isModalOpen ? 'blur-effect' : ''}`}>

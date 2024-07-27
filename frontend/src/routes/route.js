@@ -15,6 +15,7 @@ import AddFunds from "../screens/AddFunds";
 import Success from "../screens/Success";
 import Profile from "../screens/Profile";
 import Success2 from "../screens/Success2";
+import StockBuy from "../screens/StockBuy";
 
 const routes =[
     {
@@ -77,7 +78,10 @@ const routes =[
         path : "/profile",
         element: <Profile/> ,
     },
-   
+    {
+        path:'/buystock',
+        element: <StockBuy/>
+    }
 
 ];
 export default routes;
